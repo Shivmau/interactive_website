@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top:144px;
+    }
+
+    input{
+        width: 150px;
+        height: 30px;
+    }
+</style>
+<body>
+    <input type="number" id="fistnum" placeholder="Enter 1st Number">
+    <input type="number" id="secnum" placeholder="Enter 2nd Number"><br><br><br>
+    <button  onclick="add()">Added</button>
+    <button onclick="sub()">Subtract</button>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="div()">Divide</button>
+</body>
+<script>
+   
+    // let container=document.querySelectorAll("input")
+    
+
+    function add(){
+        let firstNumber=document.getElementById("fistnum").value;
+        let seconedNumber=document.getElementById("secnum").value;
+        alert ("Added : "+(Number(firstNumber)+(Number(seconedNumber))))
+    }
+
+    function sub(){
+        let firstNumber=document.getElementById("fistnum").value;
+        let seconedNumber=document.getElementById("secnum").value;
+        alert ("Subtract : "+(Number(firstNumber)-(Number(seconedNumber))))
+    }
+
+    function mul(){
+        let firstNumber=document.getElementById("fistnum").value;
+        let seconedNumber=document.getElementById("secnum").value;
+        alert ("Multiply : "+(Number(firstNumber)*(Number(seconedNumber))))
+    }
+
+    function div(){
+        let firstNumber=document.getElementById("fistnum").value;
+        let seconedNumber=document.getElementById("secnum").value;
+        alert ("Division : "+(Number(firstNumber)/(Number(seconedNumber))))
+    }
+</script>
+</html>

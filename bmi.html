@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Check Your BMI</h2>
+    <h3>Enter your weight and height below to check your BMI results </h3>
+    <h3>Put your weight in here(KG)</h3>
+    <input type="number" id="weight">
+    <h3>And your height in here(cm)</h3>
+    <input type="number" id="height"><br><br>
+    <button onclick="print()">Calculae BMI</button>
+    <h3 id="BMI1">Your BMI is    which means Your are</h3>
+</body>
+<script>
+    let weight=document.getElementById("weight")
+    let height=document.getElementById("height")
+    function print(){
+        
+        let BMI=((weight.value)*1000) / Number(height.value*height.value/10)
+        let Bmical=document.getElementById("BMI1")
+        if(BMI<=18.4){
+            Bmical.innerText=`Your BMI is ${BMI.toFixed(2)} which means Your are Underweight`
+        } else if(BMI>=18.5 && BMI<=24.9){
+            Bmical.innerText=`Your BMI is ${BMI.toFixed(2)} which means Your are NormalWeight`
+        } else if(BMI>=25 && BMI<=29.9){
+            Bmical.innerText=`Your BMI is ${BMI.toFixed(2)} which means Your are Overweight`
+        } else{
+            Bmical.innerText=`Your BMI is ${BMI.toFixed(2)} which means Your are Obese`
+        }
+
+
+
+
+
+        // Bmical.innerText=BMI.toFixed(2)
+    }
+</script>
+</html>
